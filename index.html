@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankademin Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
@@ -16,7 +15,7 @@
 
 <form id="quizForm">
 
-    <!-- Sant och Falskt (frågor) -->
+    <!-- Sant/Falskt -->
     <div class="question">
         <p>1. Coca-Cola uppfanns 1886.</p>
         <label><input type="radio" name="q1" value="sant"> Sant</label>
@@ -29,7 +28,7 @@
         <label><input type="radio" name="q2" value="falskt"> Falskt</label>
     </div>
 
-    <!-- Multiple Val (frågor) -->
+    <!-- Multiple Choice -->
     <div class="question">
         <p>3. Vilket år lanserades Nutella?</p>
         <label><input type="radio" name="q3" value="1946"> 1946</label>
@@ -46,7 +45,7 @@
         <label><input type="radio" name="q4" value="vanilj"> Vanilj</label>
     </div>
 
-    <!-- Checkbox (frågor) -->
+    <!-- Checkbox -->
     <div class="question">
         <p>5. Vilka ingredienser finns i Coca-Cola? (2 rätt)</p>
         <label><input type="checkbox" name="q5" value="koffein"> Koffein</label>
@@ -63,7 +62,7 @@
         <label><input type="checkbox" name="q6" value="Oreo"> Oreo</label>
     </div>
 
-    <!-- Sant och Falskt (frågor) -->
+    <!-- Sant/Falskt -->
     <div class="question">
         <p>7. Red Bull uppfanns i Österrike.</p>
         <label><input type="radio" name="q7" value="sant"> Sant</label>
@@ -76,13 +75,14 @@
         <label><input type="radio" name="q8" value="falskt"> Falskt</label>
     </div>
 
+    <!-- Sant/Falskt -->
     <div class="question">
         <p>9. M&M’s lanserades under andra världskriget.</p>
         <label><input type="radio" name="q9" value="sant"> Sant</label>
         <label><input type="radio" name="q9" value="falskt"> Falskt</label>
     </div>
 
-    <!-- Multiple Val (frågor) -->
+    <!-- Multiple Choice -->
     <div class="question">
         <p>10. Vilket år blev Oreo-kex populärt i USA?</p>
         <label><input type="radio" name="q10" value="1912"> 1912</label>
@@ -96,6 +96,6 @@
 
 <div id="result"></div>
 
-
+<script src="script.js"></script>
 </body>
 </html>
