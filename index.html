@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankademin Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
-<h1>Ankademin Quiz</h1>
+<div class="header">
+    <h1>Ankademin Quiz</h1>
+    <button id="modeToggle">Byt tema</button>
+</div>
 
 <form id="quizForm">
 
     <!-- Sant och Falskt (frågor) -->
     <div class="question">
-        <p>1. Coca-Cola uppfanns 1886.</p>
-        <label><input type="radio" name="q1" value="sant"> Sant</label>
-        <label><input type="radio" name="q1" value="falskt"> Falskt</label>
-    </div>
-
-     <div class="question">
         <p>1. Coca-Cola uppfanns 1886.</p>
         <label><input type="radio" name="q1" value="sant"> Sant</label>
         <label><input type="radio" name="q1" value="falskt"> Falskt</label>
@@ -97,6 +96,6 @@
 
 <div id="result"></div>
 
-<script src="script.js"></script>
+
 </body>
 </html>

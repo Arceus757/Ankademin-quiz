@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question {
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
