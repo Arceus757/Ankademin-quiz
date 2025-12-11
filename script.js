@@ -83,7 +83,7 @@ function calculateScore() {
         const isUnanswered = userAnswer === null || (Array.isArray(userAnswer) && userAnswer.length === 0);
         
         if (isRight) score++;
-        details.push({ key, isRight, isUnanswered });
+        details.push({ key, isRight, isUnanswered, userAnswer });
     }
 
     return { score, details };
@@ -103,7 +103,7 @@ function displayResult(score, details) {
     const { color, message } = getResultStyle(percent);
     
     const detailsHTML = details
-        .map(({ key, isRight, isUnanswered }) => {
+        .map(({ key, isRight, isUnanswered, userAnswer }) => {
             const questionNum = key.replace('q', 'Question ');
             let result;
             if (isUnanswered) {
@@ -111,7 +111,22 @@ function displayResult(score, details) {
             } else {
                 result = isRight ? "<strong>✓ Rätt</strong>" : "<strong>✗ Fel</strong>";
             }
-            return `<p><strong>${questionNum}:</strong> ${questionTexts[key]} - ${result}</p>`;
+            let userAnswerText;
+            if (isUnanswered) {
+                userAnswerText = "Obesvarad";
+            } else if (Array.isArray(userAnswer)) {
+                userAnswerText = userAnswer.join(', ');
+            } else {
+                userAnswerText = userAnswer;
+            }
+
+            return `
+                <p>
+                    <strong>${questionNum}:</strong> ${questionTexts[key]}<br>
+                    <span><strong>Ditt svar:</strong> ${userAnswerText}</span><br>
+                    <span>${result}</span>
+                </p>
+            `;
         })
         .join("");
 
