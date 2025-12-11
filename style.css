@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background: #ffffff;
     color: #000000;
-    padding: 20px;
+    padding: 40px 20px;
     transition: 0.3s;
+    min-height: 100vh;
 }
 
 .dark {
@@ -15,24 +16,110 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#quizForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+}
+
+#questionCounter {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 60px;
+    font-weight: normal;
+    letter-spacing: 2px;
 }
 
 .question {
-    background: rgba(0,0,0,0.05);
-    padding: 15px;
-    margin: 15px 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    display: none;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.question.active {
+    display: block;
+}
+
+.question p {
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-weight: normal;
+    color: inherit;
+}
+
+.question label {
+    display: block;
+    font-size: 20px;
+    margin: 15px auto;
+    padding: 20px 40px;
+    background: #e0e0e0;
     border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    max-width: 550px;
+}
+
+.question label:hover {
+    background: #d0d0d0;
+}
+
+.dark .question label {
+    background: #333333;
+}
+
+.dark .question label:hover {
+    background: #444444;
 }
 
 .dark .question {
-    background: rgba(255,255,255,0.1);
+    background: transparent;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 35px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #cccccc;
+    color: #000000;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #bbbbbb;
+}
+
+.dark button {
+    background: #555555;
+    color: #ffffff;
+}
+
+.dark button:hover {
+    background: #666666;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
 }
 
 .result-box {
